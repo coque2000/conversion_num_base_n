@@ -158,7 +158,7 @@ def convertir_base_n_a_base_n(numero_origen: str, base_origen: int, base_destino
         return numero_origen
     numero_b_10 = 0
     if base_origen == 10:  # Si la base origen es 10 ya no convierte a base 10
-        numero_b_10 = int(numero_origen)
+        numero_b_10 = float(numero_origen)
     else:  # Si la base es diferente a 10, lo convierte a base 10
         numero_b_10 = convertir_a_base10(numero_origen, base_origen)
     if base_destino == 10:  # Se retorna el numero sin convertir de nuevo
@@ -169,11 +169,6 @@ def convertir_base_n_a_base_n(numero_origen: str, base_origen: int, base_destino
 
 
 if __name__ == "__main__":
-
-    # print(comprobarNumeroBase("123.12321", 4))
-    # print(convertir_a_base10("666.66", 8))
-    # print(convertir_base_10_a_base_n(4566.12, 7))
-
     numero_base = pedir_numero_base()
     base_destino = pedir_base_destino()
     numero_destino = convertir_base_n_a_base_n(numero_base["numero"], numero_base["base"], base_destino)
