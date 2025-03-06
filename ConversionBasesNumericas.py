@@ -103,7 +103,7 @@ def convertir_a_base10(numero_origen: str, base_origen: int):
         parte_entera, _ = numero_origen.split(".")
         longitud_entera = len(parte_entera) - 1
     else:
-        longitud_entera = len(numero_origen)
+        longitud_entera = len(numero_origen) - 1
     base_pos = longitud_entera
     numero_destino = 0.0
 
